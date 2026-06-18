@@ -45,7 +45,7 @@ void    run_strategy(t_stack **a, t_stack **b, t_config *cfg)
     else if (cfg->strategy == MEDIUM)
     {
         assign_indexes(*a);
-        radix_sort(a, b, NULL);
+        chunk_sort(a, b);
     }
     else if (cfg->strategy == COMPLEX)
     {
@@ -55,5 +55,3 @@ void    run_strategy(t_stack **a, t_stack **b, t_config *cfg)
     else
         adaptive_sort(a, b, cfg);
 }
-
-// differencier medium et complex//
